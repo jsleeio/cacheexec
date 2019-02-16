@@ -55,5 +55,5 @@ func (s *Store) Get(key string, ttl time.Duration) ([]byte,bool) {
 
 // Put simply stores an item in the Store
 func (s *Store) Put(key string, data []byte) error {
-  return ioutil.WriteFile(s.formatKey(key), data, 0700)
+  return ioutil.WriteFile(s.formatKey(key), data, 0600)
 }
